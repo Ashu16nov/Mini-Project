@@ -46,9 +46,7 @@ int main() {
             case 0: cout << "Exiting program.\n"; break;
             default: cout << "Invalid choice! Try again.\n";
         }
-
     } while (choice != 0);
-
     return 0;
 }
 
@@ -83,7 +81,6 @@ void displayStudents() {
     while (fin.read((char*)&s, sizeof(s))) {
         cout << left << setw(10) << s.rollNo << setw(30) << s.name << s.marks << "\n";
     }
-
     fin.close();
 }
 
@@ -110,7 +107,6 @@ void searchStudent() {
 
     if (!found)
         cout << "Student with Roll No " << roll << " not found.\n";
-
     fin.close();
 }
 
@@ -145,7 +141,6 @@ void updateStudent() {
 
     if (!found)
         cout << "Student not found.\n";
-
     file.close();
 }
 
