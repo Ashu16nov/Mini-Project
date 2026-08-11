@@ -7,7 +7,7 @@ using namespace std;
 // Structure to store student information
 struct Student {
     int rollNo;
-    char name[50];
+    char name[70];
     float marks;
 };
 
