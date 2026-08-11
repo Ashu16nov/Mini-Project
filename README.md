@@ -1,2 +1,2 @@
-# Student Information System - C++ Programming MiniProject
+# Student Information System - C++ Programming Language MiniProject
 # Display output in Terminal.
