@@ -97,6 +97,7 @@ void searchStudent() {
     cin >> roll;
 
     ifstream fin(FILE_NAME, ios::binary);
+    
     while (fin.read((char*)&s, sizeof(s))) {
         if (s.rollNo == roll) {
             cout << "Student Found:\n";
@@ -123,6 +124,7 @@ void updateStudent() {
     cin >> roll;
 
     fstream file(FILE_NAME, ios::binary | ios::in | ios::out);
+    
     while (file.read((char*)&s, sizeof(s))) {
         if (s.rollNo == roll) {
             cout << "Existing Record:\n";
@@ -131,6 +133,7 @@ void updateStudent() {
             cout << "Enter New Name: ";
             cin.ignore();
             cin.getline(s.name, 50);
+            
             cout << "Enter New Marks: ";
             cin >> s.marks;
 
@@ -157,6 +160,7 @@ void deleteStudent() {
     cin >> roll;
 
     ifstream fin(FILE_NAME, ios::binary);
+    
     ofstream fout("temp.dat", ios::binary);
 
     while (fin.read((char*)&s, sizeof(s))) {
