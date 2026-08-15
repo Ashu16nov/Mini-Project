@@ -2,6 +2,7 @@
 #include <fstream>
 #include <cstring>
 #include <iomanip>
+
 using namespace std;
 
 // Structure to store student information
@@ -53,6 +54,7 @@ int main() {
 // Function to add a new student
 void addStudent() {
     Student s;
+    
     ofstream fout(FILE_NAME, ios::binary | ios::app);
 
     cout << "Enter Roll No: ";
@@ -72,6 +74,7 @@ void addStudent() {
 // Function to display all students
 void displayStudents() {
     Student s;
+    
     ifstream fin(FILE_NAME, ios::binary);
 
     cout << "\n=== All Student Records ===\n";
