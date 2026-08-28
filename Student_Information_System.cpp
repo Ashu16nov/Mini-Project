@@ -3,6 +3,7 @@
 #include <cstring>
 #include <iomanip>
 
+
 using namespace std;
 
 // Structure to store student information
@@ -47,7 +48,9 @@ int main() {
             case 0: cout << "Exiting program.\n"; break;
             default: cout << "Invalid choice! Try again.\n";
         }
+        
     } while (choice != 0);
+    
     return 0;
 }
 
@@ -84,6 +87,7 @@ void displayStudents() {
     while (fin.read((char*)&s, sizeof(s))) {
         cout << left << setw(10) << s.rollNo << setw(30) << s.name << s.marks << "\n";
     }
+    
     fin.close();
 }
 
@@ -168,6 +172,7 @@ void deleteStudent() {
             found = true;
             continue; // skip writing this record
         }
+        
         fout.write((char*)&s, sizeof(s));
     }
 
